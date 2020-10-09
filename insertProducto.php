@@ -5,13 +5,18 @@
 		$nombre=$_POST['nombre'];
 		$precio=$_POST['precio'];
 		$idCategori=$_POST['idCategori'];
+		$idBodega=$_POST['idBodega'];
+		$idProveedor=$_POST['idProveedor'];
+
 
 		if(!empty($nombre) && !empty($precio)){
-				$consulta_insert=$con->prepare('INSERT INTO producto(nombre,precio,idCategori) VALUES(:nombre,:precio,:idCategori)');
+				$consulta_insert=$con->prepare('INSERT INTO producto(nombre,precio,idCategori,idBodega,idProveedor) VALUES(:nombre,:precio,:idCategori,:idBodega,:idProveedor)');
 				$consulta_insert->execute(array(
 					':nombre' =>$nombre,
 					':precio' =>$precio,
 					':idCategori' =>$idCategori,
+					':idBodega' =>$idBodega,
+					':idProveedor' =>$idProveedor,
 				));
 				header('Location: indexProducto.php');
 			
@@ -38,6 +43,8 @@
 				<input type="text" name="nombre" placeholder="Nombre" class="input__text">
 				<input type="text" name="precio" placeholder="Precio" class="input__text">
 				<input type="text" name="idCategori" placeholder="IdCategoria" class="input__text">
+				<input type="text" name="idBodega" placeholder="IdBodega" class="input__text">
+				<input type="text" name="idProveedor" placeholder="IdProveedor" class="input__text">
 			</div>
 			<div class="btn__group">
 				<a href="indexProducto.php" class="btn btn__danger">Cancelar</a>

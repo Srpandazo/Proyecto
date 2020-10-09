@@ -40,12 +40,11 @@
 		</div>
 		<table>
 			<tr class="head">
-				<td>Cdula</td>
+				<td>Cedula</td>
 				<td>Nombre</td>
 				<td>Apellido</td>
 				<td>Direccion</td>
 				<td>Telefono</td>
-				<td>idProducto</td>
 
 				<td colspan="2">Acción</td>
 			</tr>
@@ -56,7 +55,6 @@
 					<td><?php echo $fila['apellido']; ?></td>
 					<td><?php echo $fila['direccion']; ?></td>
 					<td><?php echo $fila['telefono']; ?></td>
-					<td><?php echo $fila['idProduct']; ?></td>
 					<td><a href="updateProveedor.php?cedula=<?php echo $fila['cedula']; ?>"  class="btn__update" >Editar</a></td>
 					<td><a href="deleteProveedor.php?cedula=<?php echo $fila['cedula']; ?>" class="btn__delete">Eliminar</a></td>
 				</tr>

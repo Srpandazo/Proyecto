@@ -45,7 +45,9 @@
 				<td>Id Producto</td>
 				<td>Nombre</td>
 				<td>Precio</td>
+				<td>Id Bodega</td>
 				<td>Id Categoria</td>
+				<td>Id Proveedor</td>
 				<td colspan="2">Acción</td>
 			</tr>
 			<?php foreach($resultado as $fila):?>
@@ -53,7 +55,9 @@
 					<td><?php echo $fila['idProducto']; ?></td>
 					<td><?php echo $fila['nombre']; ?></td>
 					<td><?php echo $fila['precio']; ?></td>
-					<td><?php echo $fila['idCategori']; ?></td>
+					<td><?php echo $fila['idBodega']; ?></td>
+					<td><?php echo $fila['idCategori']; ?></td>					
+					<td><?php echo $fila['idProveedor']; ?></td>
 					<td><a href="updateProducto.php?idProducto=<?php echo $fila['idProducto']; ?>"  class="btn__update" >Editar</a></td>
 					<td><a href="deleteProducto.php?idProducto=<?php echo $fila['idProducto']; ?>" class="btn__delete">Eliminar</a></td>
 				</tr>
